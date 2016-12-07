@@ -35,11 +35,13 @@ gulp.task('sass', function () {
         .pipe(browserSync.reload({ stream: true }));
 });
 
-// gulp.task('browser-sync', function () {
-//     browserSync.init({
-//         proxy: "http://jam2.dev:8888/"
-//     });
-// });
+gulp.task('browser-sync', function () {
+    browserSync.init({
+        "server": {
+            "baseDir": "dist/"
+        }
+    });
+});
 
 gulp.task('js', function (cb) {
     pump([
@@ -67,7 +69,7 @@ gulp.task('compress-sass', ['sass'], function () {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('serve', ['imagemin', 'sass', 'js', 'compress-sass'], function () {
+gulp.task('serve', ['imagemin', 'sass', 'js', 'compress-sass', 'browser-sync'], function () {
 
 
     // browserSync.init({
