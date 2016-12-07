@@ -47,10 +47,10 @@ gulp.task('js', function (cb) {
     pump([
         // gulp.src('src/js/*.js'),
         gulp.src([
-            'src/js/jquery.js',
-            'src/js/foundation.js',
-            'src/js/jquery.validate.js',
-            'src/js/what-input.js',
+            'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/foundation-sites/dist/foundation.min.js',
+            'bower_components/dist/jquery.validate.min.js',
+            'bower_components/what-input/what-input.js',
             'src/js/app.js'
             ]),
         concat('app.js'),
