@@ -79,7 +79,7 @@ gulp.task('serve', ['imagemin', 'sass', 'js', 'compress-sass', 'browser-sync'], 
     gulp.watch(['src/scss/**/*.scss'], ['sass', 'compress-sass']);
     gulp.watch(['src/css/*.css']).on('change', browserSync.reload);
     gulp.watch(['src/js/*.js'], ['js']);
-    gulp.watch(['../js/*.js']).on('change', browserSync.reload);
+    gulp.watch(['src/js/*.js']).on('change', browserSync.reload);
     gulp.watch(["dist/*.html"]).on('change', browserSync.reload);
 });
 
