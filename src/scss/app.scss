@@ -54,7 +54,24 @@
 @import 'components/normalize';
 @import 'components/mixins';
 
+.row .row {
+    margin-left: 0;
+    margin-right: 0;
+}
 
+html {
+    background: #fff;
+}
+
+body { 
+    position: relative;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
 
 
 
