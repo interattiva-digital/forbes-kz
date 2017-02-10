@@ -62,6 +62,11 @@ gulp.task('js', function (cb) {
     );
 });
 
+gulp.task('fonts', () => {
+    return gulp.src('dist/fonts/**')
+        .pipe(gulp.dest('src/fonts'));
+});
+
 gulp.task('compress-sass', ['sass'], function () {
     return gulp.src('dist/css/app.css')
         .pipe(rename({ suffix: '.min' }))
