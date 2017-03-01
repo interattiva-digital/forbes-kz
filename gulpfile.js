@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gulpif = require('gulp-if');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync').create();
 var uglify = require('gulp-uglify');
@@ -7,85 +8,112 @@ var concat = require('gulp-concat')
 var rename = require("gulp-rename");
 var minify = require('gulp-clean-css');
 var imagemin = require('gulp-imagemin');
+var jsonfile = require('jsonfile');
+var panini = require('panini');
+
+var config = jsonfile.readFileSync('./config.json');
 
 var sassPaths = [
     'bower_components/foundation-sites/scss',
-    'bower_components/motion-ui/src'
+    'bower_components/motion-ui/src',
+    'node_modules/normalize.css',
 ];
 
 gulp.task('imagemin', () =>
-    gulp.src('src/images/*')
+    gulp.src(config.source + 'images/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'))
+        .pipe(gulp.dest(config.dist + 'images'))
 );
 
 gulp.task('sass', function () {
-    return gulp.src('src/scss/app.scss')
+    return gulp.src(config.source + 'scss/app.scss')
         .pipe($.sourcemaps.init())
         .pipe($.sass({
             includePaths: sassPaths,
             // outputStyle: 'compressed' // if css compressed **file size**
         })
-            .on('error', $.sass.logError))
+        .on('error', $.sass.logError))
         .pipe($.autoprefixer({
             browsers: ['last 2 versions', 'ie >= 9']
         }))
         .pipe($.sourcemaps.write())
-        .pipe(gulp.dest('dist/css/'))
+        .pipe(gulp.dest(config.dist + 'css'))
         .pipe(browserSync.reload({ stream: true }));
 });
+
+gulp.task('pages', function() {
+  gulp.src(config.source + 'templates/pages/**/*.{html,hbs,handlebars}')
+    .pipe(panini({
+      root: config.source + 'templates/pages/',
+      layouts: config.source + 'templates/layouts/',
+      partials: config.source + 'templates/partials/',
+      helpers: config.source + 'templates/helpers/',
+      data: config.source + 'templates/data/'
+    }))
+    .pipe(gulp.dest(config.dist));
+});
+
+gulp.task('pages:reset', function(done) {
+    panini.refresh()
+    gulp.run('pages');
+    done();
+})
 
 gulp.task('browser-sync', function () {
     browserSync.init({
         "server": {
-            "baseDir": "dist/"
+            "baseDir": config.dist
         }
     });
 });
 
+
 gulp.task('js', function (cb) {
     pump([
-        // gulp.src('src/js/*.js'),
         gulp.src([
-            'bower_components/jquery/dist/jquery.min.js',
+            'node_modules/jquery/dist/jquery.min.js',
             'bower_components/foundation-sites/dist/foundation.min.js',
             'bower_components/dist/jquery.validate.min.js',
             'bower_components/what-input/what-input.js',
-            'src/js/app.js'
+            config.source + 'js/app.js'
             ]),
         concat('app.js'),
         uglify(),
         rename({ suffix: '.min' }),
-        gulp.dest('dist/js')
+        gulp.dest(config.dist + 'js')
     ],
         cb
     );
 });
 
-gulp.task('fonts', () => {
-    return gulp.src('dist/fonts/**')
-        .pipe(gulp.dest('src/fonts'));
-});
 
 gulp.task('compress-sass', ['sass'], function () {
-    return gulp.src('dist/css/app.css')
+    return gulp.src(config.dist + 'css/app.css')
         .pipe(rename({ suffix: '.min' }))
         .pipe(minify())
-        .pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest(config.dist + 'css'));
 });
 
-gulp.task('serve', ['imagemin', 'sass', 'js', 'compress-sass', 'browser-sync'], function () {
+gulp.task('fonts', () => {
+    return gulp.src(config.source + '/fonts/**')
+        .pipe(gulp.dest(config.dist ));
+});
 
+gulp.task('dropbox', function() {
+    return gulp.src(config.dist + '/**/*')
+    .pipe(gulp.dest('/Users/atomeon/Dropbox/cabinet-markup'));
+});
 
-    // browserSync.init({
-    //     proxy: "http://jam2.dev:8888/"
-    // });
+gulp.task('build', ['js', 'sass', 'imagemin']);
 
-    gulp.watch(['src/scss/**/*.scss'], ['sass', 'compress-sass']);
-    gulp.watch(['src/css/*.css']).on('change', browserSync.reload);
-    gulp.watch(['src/js/*.js'], ['js']);
-    gulp.watch(['src/js/*.js']).on('change', browserSync.reload);
-    gulp.watch(["dist/*.html"]).on('change', browserSync.reload);
+gulp.task('serve', ['pages', 'imagemin', 'fonts', 'sass', 'js', 'compress-sass', 'browser-sync'], function () {
+    gulp.watch([config.source + 'templates/pages/**/*'], ['pages']);
+    gulp.watch([config.source + 'templates/{layouts,partials,helpers,data}/**/*'], ['pages:reset']);
+    gulp.watch([config.source + 'scss/**/*.scss'], ['sass', 'compress-sass']);
+    gulp.watch([config.source + 'css/*.css']).on('change', browserSync.reload);
+    gulp.watch([config.source + 'js/*.js'], ['js']);
+    gulp.watch([config.source + 'js/*.js']).on('change', browserSync.reload);
+    gulp.watch([config.dist + "*.html"]).on('change', browserSync.reload);
 });
 
 gulp.task('default', ['serve']);
