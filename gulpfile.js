@@ -17,12 +17,13 @@ var sassPaths = [
     'bower_components/foundation-sites/scss',
     'bower_components/motion-ui/src',
     'node_modules/normalize.css',
+    'node_modules/slick-carousel/slick/',
 ];
 
 gulp.task('imagemin', () =>
-    gulp.src(config.source + 'images/*')
+    gulp.src(config.source + 'img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest(config.dist + 'images'))
+        .pipe(gulp.dest(config.dist + 'img'))
 );
 
 gulp.task('sass', function () {
@@ -75,6 +76,8 @@ gulp.task('js', function (cb) {
             'bower_components/foundation-sites/dist/foundation.min.js',
             'bower_components/dist/jquery.validate.min.js',
             'bower_components/what-input/what-input.js',
+            'node_modules/slick-carousel/slick/slick.min.js',
+            'node_modules/sticky-js/dist/sticky.min.js',
             config.source + 'js/app.js'
             ]),
         concat('app.js'),
@@ -94,10 +97,10 @@ gulp.task('compress-sass', ['sass'], function () {
         .pipe(gulp.dest(config.dist + 'css'));
 });
 
-gulp.task('fonts', () => {
-    return gulp.src(config.source + '/fonts/**')
-        .pipe(gulp.dest(config.dist ));
-});
+// gulp.task('fonts', () => {
+//     return gulp.src(config.source + '/fonts/**')
+//         .pipe(gulp.dest(config.dist ));
+// });
 
 gulp.task('dropbox', function() {
     return gulp.src(config.dist + '/**/*')
@@ -106,9 +109,10 @@ gulp.task('dropbox', function() {
 
 gulp.task('build', ['js', 'sass', 'imagemin']);
 
-gulp.task('serve', ['pages', 'imagemin', 'fonts', 'sass', 'js', 'compress-sass', 'browser-sync'], function () {
+gulp.task('serve', ['pages', 'imagemin', 'sass', 'js', 'compress-sass', 'browser-sync'], function () {
     gulp.watch([config.source + 'templates/pages/**/*'], ['pages']);
     gulp.watch([config.source + 'templates/{layouts,partials,helpers,data}/**/*'], ['pages:reset']);
+    gulp.watch([config.source + 'img/**/*'], ['imagemin']);
     gulp.watch([config.source + 'scss/**/*.scss'], ['sass', 'compress-sass']);
     gulp.watch([config.source + 'css/*.css']).on('change', browserSync.reload);
     gulp.watch([config.source + 'js/*.js'], ['js']);

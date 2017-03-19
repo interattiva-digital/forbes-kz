@@ -1,0 +1,152 @@
+nav {
+	border-top: 2px solid $primary;
+	border-bottom: 1px solid $main-gray-light;
+}
+
+$nav-height: 50px;
+
+.nav-height {
+	height: $nav-height;
+}
+.nav-wrapper {
+	display: table;
+	width: 100%;
+	height: $nav-height;
+	z-index: 5;
+	background-color: #fff;
+
+	&.sticky-nav {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+.burger {
+	height: 24px;
+	width: 24px;
+}
+
+.nav__elements, .search__field {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.nav__elements {
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 0;
+}
+
+.nav__element {
+	font-weight: 600;
+	font-size: 14px;
+	display: inline-block;
+	vertical-align: middle;
+	&:not(:last-child) {
+		margin-right: 30px;
+	}
+	a {
+		color: $secondary;
+	}
+
+	&.is-active {
+		a {
+			color: $primary;
+		}
+	}
+}
+
+.search__field {
+	input {
+		margin: 0;
+		width: 150px;
+		font-size: 14px;
+	}
+}
+
+
+.burger {
+	position: relative;
+}
+
+
+// BURGER MENU
+.nav-icon3 {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: transform, background .5s ease-in-out;
+    cursor: pointer;
+    left: -9px;
+    top: -7px;
+
+//   @include breakpoint(large) {
+//     display: none;
+//   }
+}
+
+.nav-icon3 span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 20px;
+  background: $primary;
+  border-radius: 9px;
+  opacity: 1;
+  right: 10px;
+  transform: rotate(0deg);
+  transition: transform .25s ease-in-out;
+}
+
+.nav-icon3 span:nth-child(1) {
+  top: 12px;
+}
+
+.nav-icon3 span:nth-child(2), .nav-icon3 span:nth-child(3) {
+  top: 18px;
+}
+
+.nav-icon3 span:nth-child(4) {
+  top: 24px;
+}
+
+.nav-icon3.open {
+	top: 6px;
+	z-index: 10;
+}
+
+.nav-icon3.open span{
+	background: #fff;
+}
+
+.nav-icon3.open span:nth-child(1) {
+  top: 12px;
+  width: 0%;
+}
+
+.nav-icon3.open span:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.nav-icon3.open span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+
+.nav-icon3.open span:nth-child(4) {
+  top: 24px;
+  width: 0%;
+}
+
+// .ad-top {
+// 	transition: all .3s;
+// 	height: 90px;
+// 	overflow: hidden;
+// }
+
+// .ad-top.open {
+// 	height: 0;
+// }

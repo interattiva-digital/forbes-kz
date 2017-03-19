@@ -1,16 +1,22 @@
 @charset 'utf-8';
 
+@import 'slick.scss';
+
 @import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
 @include foundation-global-styles;
 @include foundation-grid;
+
 // @include foundation-flex-grid;
+
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
+
 // @include foundation-range-input;
+
 @include foundation-accordion;
 @include foundation-accordion-menu;
 @include foundation-badge;
@@ -30,8 +36,10 @@
 @include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
+
 // @include foundation-progress-element;
 // @include foundation-meter-element;
+
 @include foundation-slider;
 @include foundation-sticky;
 @include foundation-reveal;
@@ -44,6 +52,7 @@
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
+
 // @include foundation-flex-classes;
 
 @include motion-ui-transitions;
@@ -54,9 +63,28 @@
 @import 'components/normalize';
 @import 'components/mixins';
 
+.row {
+    padding: 0 10px;
+}
 .row .row {
     margin-left: 0;
     margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+}
+.column:first-child {
+    padding-left: 0;
+}
+.column:last-child {
+    padding-right: 0;
+}
+
+a {
+    color: inherit;
+    &:hover {
+        color: inherit;
+        text-decoration: underline;
+    }
 }
 
 html {
@@ -64,6 +92,7 @@ html {
 }
 
 body { 
+    min-width: $global-width; 
     position: relative;
 }
 
@@ -73,6 +102,54 @@ body {
     overflow: hidden;
 }
 
+.va-helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 
+    & + img {
+        vertical-align: middle;
+    }
 
-// @import 'parts/nav';
+    & + svg {
+        vertical-align: text-top;
+    }
+}
+
+h5 {
+    display: inline-block;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 18px;
+    line-height: 1;
+    vertical-align: -5px;
+}
+
+.is-table {
+    display: table;
+    width: 100%;
+}
+.is-tcell {
+    display: table-cell;
+}
+
+.wrapper-top {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@import 'parts/socials';
+@import 'parts/header';
+@import 'parts/nav';
+@import 'parts/main-common';
+@import 'parts/menu-main';
+@import 'parts/ad';
+@import 'parts/sidebar';
+@import 'parts/inner-page';
+@import 'parts/footer';

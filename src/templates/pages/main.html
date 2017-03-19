@@ -1,0 +1,101 @@
+
+<div class="row">
+	{{> menu-news}}
+	<div class="news-top row">
+		<div class="column small-7">
+			{{> card-news-hero}}
+		</div>
+		<div class="column small-5">
+			{{#repeat 4}}
+				{{> card-news-small}}
+			{{/repeat}}
+		</div>
+	</div>
+	<div class="main-content">
+		<div class="row">
+			<div class="column small-9">
+				{{> ad-inner}}
+				{{> menu-categ-inner}}
+				<div class="news-container row">
+					{{#repeat 6}}
+						<div class="column small-4">
+							{{> card-news-single}}
+						</div>
+					{{/repeat}}
+				</div>
+				{{> ad-inner}}
+				<div class="news-container row">
+					{{#repeat 6}}
+						<div class="column small-4">
+							{{> card-news-single}}
+						</div>
+					{{/repeat}}
+				</div>
+				{{> ad-inner}}
+				<div class="news-container clearfix">
+					<div class="float-left">
+						{{> card-news-secondary}}
+					</div>
+					<div class="float-right">
+						{{> card-news-secondary}}
+					</div>
+				</div>
+
+				<div class="news-container row">
+					{{#repeat 2}}
+					<div class="column small-4">
+						{{> card-news-secondary}}
+					</div>
+					{{/repeat}}
+					<div class="column small-4">
+						{{> card-news-secondary-materials}}
+					</div>
+				</div>
+
+				<div class="raiting">
+					{{> menu-forbes}}
+					{{> card-raiting}}
+					{{> card-raiting-ran}}
+					<div class="row news-container raiting-news">
+						{{#repeat 3}}
+							<div class="column small-4">
+								{{> card-raiting-news}}
+							</div>
+						{{/repeat}}
+					</div>
+				</div>
+				<div class="blogs">
+					{{> menu-categ}}
+					<div class="news-container row">
+						{{#repeat 3}}
+							<div class="column small-4">{{> card-blog}}</div>
+						{{/repeat}}
+					</div>
+				</div>
+				<div class="news-container clearfix">
+					<div class="float-left">
+						{{> card-news-secondary-subnews}}
+					</div>
+					<div class="float-right">
+						{{> card-news-secondary-subnews}}
+					</div>
+				</div>
+			</div>
+			<div class="column small-3">
+				{{> ad-side}}
+				{{> sidebar-atameken}}
+				{{> sidebar-atameken}}
+				{{> sidebar-atameken}}
+				{{> sidebar-atameken}}
+				{{> sidebar-atameken}}
+				{{> sidebar-journal}}
+				{{> sidebar-birthday}}
+				{{> sidebar-editor}}
+				{{> ad-side}}
+				{{> sidebar-form}}
+				{{> sidebar-info}}
+				{{> sidebar-info-read}}
+			</div>
+		</div>
+	</div>
+</div>

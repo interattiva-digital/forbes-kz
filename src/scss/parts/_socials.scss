@@ -1,0 +1,26 @@
+.soc-ico {
+	border-radius: 50%;
+	background-color: $secondary;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	position: relative;
+	vertical-align: bottom;
+	svg {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		fill: #fff;
+	}
+	&:not(:last-child) {
+		margin-right: 5px
+	}
+}
+
+.socials.menu-desctop__soc .soc-ico {
+	background-color: #fff;
+	svg {
+		fill: $primary;
+	}
+}

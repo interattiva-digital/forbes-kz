@@ -1,0 +1,16 @@
+<div class="raiting-container">
+	<h5 class="raiting__title">20 звезд шоу-бизнеса и спорта - 2016</h5>
+	<div class="raiting-overlay"></div>
+	<div class="raiting-next ">
+		<button type="button" id="slider-stars__next">
+			<svg width="20" height="20">
+				<use xlink:href="#ico-arrow-alt" />
+			</svg>
+		</button>
+	</div>
+	<ul class="menu-common raiting-slider-stars">
+		{{#repeat 10}}
+			<li class="raiting__person">{{> card-person}}</li>
+		{{/repeat}}
+	</ul>
+</div>
