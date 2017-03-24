@@ -40,7 +40,7 @@ $(document).ready(function(){
 
         $('[data-js-menu-desktop]').toggleClass('open');
 
-        $('body').toggleClass('wrapper-top');
+        // $('body').toggleClass('wrapper-top');
     });
 
 	//    ************************  STICKY *******************************

@@ -1,0 +1,19 @@
+@import 'foundation';
+
+@include foundation-everything();
+
+.news-gallery {
+	@include grid-row();
+}
+
+.news-item {
+	@include grid-column(4, 30px);
+
+	&:first-child {
+		margin-left: -15px;
+	}
+
+	&:last-child {
+		margin-right: -15px;
+	}
+}

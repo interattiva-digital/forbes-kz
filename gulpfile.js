@@ -28,7 +28,7 @@ gulp.task('imagemin', () =>
 );
 
 gulp.task('sass', function () {
-    return gulp.src(config.source + 'scss/app.scss')
+    return gulp.src(config.source + 'scss/*.scss')
         .pipe($.sourcemaps.init())
         .pipe($.sass({
             includePaths: sassPaths,

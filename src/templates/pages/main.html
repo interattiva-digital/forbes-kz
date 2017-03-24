@@ -1,5 +1,5 @@
 
-<div class="row">
+<div class="row column">
 	{{> menu-news}}
 	<div class="news-top row">
 		<div class="column small-7">
@@ -17,7 +17,7 @@
 				{{> ad-inner}}
 				{{> menu-categ-inner}}
 				<div class="news-container row">
-					{{#repeat 6}}
+					{{#repeat 3}}
 						<div class="column small-4">
 							{{> card-news-single}}
 						</div>
@@ -25,7 +25,14 @@
 				</div>
 				{{> ad-inner}}
 				<div class="news-container row">
-					{{#repeat 6}}
+					{{#repeat 3}}
+						<div class="column small-4">
+							{{> card-news-single}}
+						</div>
+					{{/repeat}}
+				</div>
+				<div class="news-container row">
+					{{#repeat 3}}
 						<div class="column small-4">
 							{{> card-news-single}}
 						</div>

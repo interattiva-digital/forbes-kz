@@ -233,15 +233,15 @@ article {
 }
 
 .see-also {
-	width: 193px;
+	// width: 193px;
 	height: 207px;
 	display: inline-block;
 	font-size: 13px;
 	color: $gray-text;
 	vertical-align: top;
-	&:not(:last-child) {
-		margin-right: 30px;
-	}
+	// &:not(:last-child) {
+	// 	margin-right: 30px;
+	// }
 	overflow: hidden;
 }
 
