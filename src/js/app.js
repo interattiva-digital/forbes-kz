@@ -35,10 +35,10 @@ $(document).ready(function(){
 	});
 
 	//    ************************  Burger-menu *******************************
-    $('[js-burger]').click(function (e) {
-        $('[js-burger]').toggleClass('open');
+    $('[data-js-burger]').click(function (e) {
+        $('[data-js-burger]').toggleClass('open');
 
-        $('[js-menuDesktop]').toggleClass('open');
+        $('[data-js-menu-desktop]').toggleClass('open');
 
         $('body').toggleClass('wrapper-top');
     });
