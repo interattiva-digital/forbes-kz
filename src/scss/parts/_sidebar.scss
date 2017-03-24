@@ -1,0 +1,268 @@
+.side {
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+}
+
+.atameken {
+	border: 1px solid #C0E0F3;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.gray-bg {
+	background: #FAFAFA;
+	box-shadow: inset 0 -1px 0 0 #ECECEC;
+}
+
+.atameken-wrapper {
+	background-color: #C0E0F3;
+	padding: 20px 10px 10px 20px;
+}
+.atameken__logo {
+	text-align: center;
+	padding: 10px;
+}
+
+.atameken__content {
+	margin-bottom: 20px;
+}
+.img__holder.is-ata {
+	height: 54px;
+	width: 80px;
+	border: 1px solid #fff;
+	margin-right: 10px;
+}
+
+.atameken__img, .atameken__info {
+	vertical-align: top;
+}
+
+.atameken__info {
+	font-size: 13px;
+}
+
+.journal {
+	padding: 20px;
+	display: block;
+	* {
+		text-decoration: none;
+	}
+}
+
+.side__title {
+	font-size: 16px;
+	color: #7C7C7C;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.side__title--blue {
+	color: $primary;
+}
+
+.journal__img {
+	margin: 20px 0;
+	box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.5);
+	img {
+		width: 100%;
+	}
+}
+
+.birthday {
+	padding: 20px;
+}
+
+.birthday__person {
+	&:first-child {
+		margin-top: 20px;
+	}
+	margin-bottom: 10px;
+}
+
+.birthday__person-name {
+	margin-bottom: 5px;
+}
+
+.birthday__person-who {
+	font-family: $ff-second;
+	color: $gray-text;
+	font-size: 12px;
+}
+
+.editor {
+	padding: 20px;
+}
+
+.editor__person {
+	vertical-align: top;
+}
+
+.editor__name {
+	font-size: 13px;
+	color: $primary;
+	margin-top: 10px;
+}
+
+.editor__ava {
+	height: 50px;
+	width: 50px;
+	img {
+		border-radius: 50%;
+		height: 100%;
+	}
+}
+.editor__theme {
+	color: $gray-text;
+	margin: 20px 0 30px;
+}
+.editor__theme-title {
+	font-family: $ff-second;
+	font-size: 12px;
+}
+
+.editor__theme-img {
+	vertical-align: top;
+}
+
+.editor__theme-img .img-holder {
+	width: 70px;
+	height: 47px;
+	margin-right: 10px;
+}
+
+.form-subs__subtitle {
+	font-family: $ff-second;
+	font-size: 16px;
+	color: $gray-text;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.form-subs__title {
+	color: $primary;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.form-subs {
+	padding: 20px 20px 30px;
+}
+
+.button {
+	height: 40px;
+	width: 100%;
+	border-radius: 2px;
+	background-image: linear-gradient(45deg, #193161 0%, #4062A6 100%);
+	text-align: left;
+	position: relative;
+	svg {
+		position: absolute;
+		fill: #fff;
+		top: 10px;
+		right: 10px;
+	}
+}
+
+.form-field {
+	margin-bottom: 20px;
+
+	label {
+		font-size: 12px;
+		color: $main-gray-dark;
+		margin-bottom: 4px;
+	}
+
+	input {
+		font-size: 14px;
+		margin: 0;
+	}
+}
+
+.info-posts {
+	padding: 20px 20px 0;
+}
+
+.info-posts__title {
+	font-size: 16px;
+	color: $gray-text;
+	margin-bottom: 10px;
+}
+
+.info-posts__button {
+	font-size: 12px;
+	color: $gray-text;
+}
+
+.tab {
+	display: none;
+}
+
+.tab.is-active {
+	display: block;
+}
+
+.info-posts__button {
+	width: 25%;
+	text-align: center;
+	// height: 24px;
+
+	button {
+		vertical-align: middle;
+		padding: 5px 8px;
+		border-radius: 2px;
+	}
+
+	button.is-active {
+		background-color: $primary;
+		color: #fff;
+	}
+
+}
+
+.info-posts__container {
+	margin-top: 10px;
+}
+
+.info-posts__elenents {
+	margin: 0;
+	margin-left: 10px;
+	counter-reset: infoOlCount;
+	
+	li{
+		list-style: none;
+	}
+
+	li:before {
+		display: table-cell;
+		counter-increment: infoOlCount;
+		content:counter(infoOlCount);
+		font-size: 16px;
+		font-weight: 600;
+		margin-right: 10px;
+		padding-top: 10px;
+	}
+}
+
+.popular-discuss {
+	padding-bottom: 20px;
+}
+
+.popular-discuss__container {
+	margin-left: 10px
+}
+
+.popular-discuss__content {
+	color: $gray-text;
+	font-size: 13px;
+}
+
+.social-sharing {
+	margin-top: 10px;
+	font-size: 9px;
+	color: $main-gray-dark;
+
+	svg {
+		fill: $primary;
+	}
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="5px" height="10px" viewBox="0 0 5 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="8.9329571 6 4.43265112 10.5 4 10.0673783 8.06662409 6 4 1.9326217 4.43265112 1.5"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Breadcrumbs" transform="translate(-50.000000, -36.000000)">
+            <g id="Icons/ux/arrowbig-alt">
+                <g transform="translate(46.000000, 35.000000)">
+                    <rect id="Frame" x="0" y="0" width="12" height="12"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Color/Main-3" mask="url(#mask-2)" fill-rule="evenodd" fill="#7C7C7C">
+                        <rect id="Color/Main-1" x="0" y="0" width="12" height="12"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
