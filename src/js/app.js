@@ -44,13 +44,14 @@ $(document).ready(function(){
     });
 
 	//    ************************  STICKY *******************************
-	var scrollValue = $('[js-sticky]').offset().top;
-
+	var $navWrapper = $('.nav-wrapper[data-js-sticky]');
+	var scrollValue = $navWrapper.offset().top;
+	console.log(scrollValue);
 	$(window).on('scroll', function() {
 		if ($(this).scrollTop() > scrollValue) {
-			$('[js-sticky]').addClass('sticky-nav');
+			$navWrapper.addClass('sticky-nav');
 		} else {
-			$('[js-sticky]').removeClass('sticky-nav');
+			$navWrapper.removeClass('sticky-nav');
 		}
 	});
 });
