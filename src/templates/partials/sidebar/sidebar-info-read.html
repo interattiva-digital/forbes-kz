@@ -1,0 +1,40 @@
+<div class="side info-posts gray-bg">
+	<div class="info-posts__title">
+		Самые <span class="side__title side__title--blue">Читаемые</span>
+	</div>
+	<div class="info-posts__buttons">
+		<ul class="menu-common tab-nav" data-tab-group="#info-posts__read">
+			<li class="info-posts__button"><button class="tab-control is-active" data-target="#tab-1">День</button></li>
+			<li class="info-posts__button"><button class="tab-control" data-target="#tab-2">Неделя</button></li>
+			<li class="info-posts__button"><button class="tab-control" data-target="#tab-3">Месяц</button></li>
+			<li class="info-posts__button"><button class="tab-control" data-target="#tab-4">Год</button></li>
+		</ul>
+	</div>
+
+	<div class="tab-group info-posts__container" id="info-posts__read">
+		<div id="tab-1" class="tab is-active">
+			<ol class="info-posts__elenents">
+				<li>{{> sidebar-news-mostread}}</li>
+				<li>{{> sidebar-news-mostread}}</li>
+				<li>{{> sidebar-news-mostread}}</li>
+				<li>{{> sidebar-news-mostread}}</li>
+				<li>{{> sidebar-news-mostread}}</li>
+				<li>{{> sidebar-news-mostread}}</li>
+				<li>{{> sidebar-news-mostread}}</li>
+			</ol>
+		</div>
+		<div id="tab-2" class="tab">tab2
+			<ol class="info-posts__elenents">
+			</ol>
+		</div>
+		<div id="tab-3" class="tab">tab3
+			<ol class="info-posts__elenents">
+			</ol>
+		</div>
+		<div id="tab-4" class="tab">tab4
+			<ol class="info-posts__elenents">
+				
+			</ol>
+		</div>
+	</div>
+</div>

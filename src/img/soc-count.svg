@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="24px" viewBox="0 0 42 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Bubble</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4,2.0046528 C4,0.897513631 4.90185079,0 6.00285922,0 L39.9971408,0 C41.1032894,0 42,0.897026226 42,2.00494659 L42,21.9950534 C42,23.1023548 41.0981492,24 39.9971408,24 L6.00285922,24 C4.89671062,24 4,23.1034256 4,21.9953472 L4,14.0938721 L0,12 L4,9.90612793 L4,2.0046528 Z" id="path-1"></path>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="42" height="24" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="UX/SocialCount" stroke-width="2" stroke="#ECECEC" fill="#FFFFFF">
+            <g id="SocialCount">
+                <use id="Bubble" mask="url(#mask-2)" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>

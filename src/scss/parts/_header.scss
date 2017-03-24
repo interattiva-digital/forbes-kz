@@ -1,0 +1,41 @@
+header {
+	padding: 20px 0 10px;
+	display: table;
+	width: 100%;
+}
+
+.langs, .logo, .socials {
+	display: table-cell;
+	vertical-align: bottom;
+	width: 33.33%;
+}
+
+.langs {
+	color: $main-gray-dark;
+
+	.is-active {
+		color: $secondary;
+	}
+	font-size: 0;
+	a {
+		font-size: 16px;
+		color: inherit;
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+	}
+}
+
+.logo {
+	text-align: center;
+}
+
+.socials {
+	font-size: 0;
+	text-align: right;
+
+	svg {
+
+	}
+}
+
