@@ -4,15 +4,25 @@
 	</div>
 	<div class="info-posts__buttons">
 		<ul class="menu-common tab-nav" data-tab-group="#info-posts__content">
-			<li class="info-posts__button"><button class="tab-control is-tcell is-active" data-target="#tab-1">День</button></li>
-			<li class="info-posts__button"><button class="tab-control" data-target="#tab-2">Неделя</button></li>
-			<li class="info-posts__button"><button class="tab-control" data-target="#tab-3">Месяц</button></li>
-			<li class="info-posts__button"><button class="tab-control" data-target="#tab-4">Год</button></li>
+			<li class="info-posts__button"><button class="tab-control is-tcell is-active" data-target="#info-posts-tab-1">День</button></li>
+			<li class="info-posts__button"><button class="tab-control" data-target="#info-posts-tab-2">Неделя</button></li>
+			<li class="info-posts__button"><button class="tab-control" data-target="#info-posts-tab-3">Месяц</button></li>
+			<li class="info-posts__button"><button class="tab-control" data-target="#info-posts-tab-4">Год</button></li>
 		</ul>
 	</div>
 
 	<div class="tab-group info-posts__container" id="info-posts__content">
-		<div id="tab-1" class="tab is-active">
+		<div id="info-posts-tab-1" class="tab is-active">
+			<ol class="info-posts__elenents">
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+			</ol>
+		</div>
+		<div id="info-posts-tab-2" class="tab">
 			<ol class="info-posts__elenents">
 				<li>{{> sidebar-news-popular}}</li>
 				<li>{{> sidebar-news-popular}}</li>
@@ -23,17 +33,21 @@
 				<li>{{> sidebar-news-popular}}</li>
 			</ol>
 		</div>
-		<div id="tab-2" class="tab">tab2
+		<div id="info-posts-tab-3" class="tab">
 			<ol class="info-posts__elenents">
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
 			</ol>
 		</div>
-		<div id="tab-3" class="tab">tab3
+		<div id="info-posts-tab-4" class="tab">
 			<ol class="info-posts__elenents">
-			</ol>
-		</div>
-		<div id="tab-4" class="tab">tab4
-			<ol class="info-posts__elenents">
-				
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
+				<li>{{> sidebar-news-popular}}</li>
 			</ol>
 		</div>
 	</div>
