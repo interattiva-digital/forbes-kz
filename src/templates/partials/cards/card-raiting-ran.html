@@ -1,0 +1,16 @@
+<div class="raiting-container">
+	<h5 class="raiting__title">Рейтинг рантье Казахстана - 2016</h5>
+	<div class="raiting-overlay"></div>
+	<div class="raiting-next ">
+		<button type="button" id="slider-ran__next">
+			<svg width="20" height="20">
+				<use xlink:href="#ico-arrow-alt" />
+			</svg>
+		</button>
+	</div>
+	<ul class="menu-common raiting-slider-ran">
+		{{#repeat 10}}
+			<li class="raiting__person">{{> card-person}}</li>
+		{{/repeat}}
+	</ul>
+</div>

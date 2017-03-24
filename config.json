@@ -1,0 +1,10 @@
+{
+  "source": "src/",
+  "dist": "dist/",
+
+  "scss": {},
+
+  "js": {
+    "entry": "app.js"
+  }
+}

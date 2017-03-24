@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/ux/moneyrate</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M16.6795482,12.2062377 C17.1820019,12.6446205 17.0421307,13 16.3818533,13 L8.61921666,13 C7.95235058,13 7.81105732,12.6516098 8.3215218,12.2062377 L11.590762,9.35387841 C12.0932158,8.91549563 12.8998435,8.9085064 13.410308,9.35387841 L16.6795482,12.2062377 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons/ux/moneyrate">
+            <rect id="Frame" x="0" y="0" width="24" height="24"></rect>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Path" fill="#000000" xlink:href="#path-1"></use>
+            <g id="Color/Main-1" mask="url(#mask-2)" fill="#193161">
+                <rect x="0" y="0" width="24" height="24"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

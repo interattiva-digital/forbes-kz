@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Icons/ux/arrowbig</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="14 8 7.99959203 14 7.42272387 13.4231711 12.4374788 8.40875714 2 8.40875714 2 7.59287463 12.4382947 7.59287463 7.42272387 2.57682894 7.99959203 2"></polygon>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Menu/Forbes" transform="translate(-856.000000, -36.000000)">
+            <g id="Forbes-Menu">
+                <g id="Icons/ux/arrowbig" transform="translate(854.000000, 34.000000)">
+                    <rect id="Frame" x="0" y="0" width="16" height="16"></rect>
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="Color/Main-3" mask="url(#mask-2)" fill-rule="evenodd" fill="#7C7C7C">
+                        <rect id="Color/Main-1" x="0" y="0" width="16" height="16"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
