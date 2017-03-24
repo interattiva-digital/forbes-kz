@@ -259,12 +259,14 @@
 	position: relative;
 }
 
+
 .news__info.is-single {
 	height: 220px;
 }
 
-.news__img.is-single {
+.news__img-holder.is-single {
 	height: 180px;
+	width: 270px;
 }
 
 .news__title.is-single {
