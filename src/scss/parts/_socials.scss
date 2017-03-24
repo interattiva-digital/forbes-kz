@@ -6,7 +6,7 @@
 	display: inline-block;
 	position: relative;
 	vertical-align: bottom;
-	svg {
+	& > svg {
 		position: absolute;
 		left: 50%;
 		top: 50%;
@@ -20,7 +20,7 @@
 
 .socials.menu-desctop__soc .soc-ico {
 	background-color: #fff;
-	svg {
+	& > svg {
 		fill: $primary;
 	}
 }
