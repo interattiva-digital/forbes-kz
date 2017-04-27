@@ -11,6 +11,12 @@ h2 {
 	margin-bottom: 20px;
 }
 
+h3 {
+	font-size: 16px;
+    color: $main-gray-dark;
+    font-weight: 600;
+}
+
 article {
 	font-family: $ff-second;
 	color: #000;
@@ -280,6 +286,20 @@ article {
 	}
 }
 
+.ra-card__authors {
+	max-width: 70%;
+}
+
+.news__author {
+	&:not(:last-child) {
+		a {
+			&:after {
+				content: ',';
+			}
+		}
+	}
+}
+
 
 .ra-card__title {
 	font-size: 18px;
@@ -295,6 +315,6 @@ article {
 	margin-top: 5px;
 }
 
-.rubric__container {
+.inner__container {
 	margin: 30px 0;
 }
