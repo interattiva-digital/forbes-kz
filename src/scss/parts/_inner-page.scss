@@ -323,7 +323,7 @@ article {
 .prorate__person {
 	max-width: 270px;
 	margin-right: 30px;
-	margin-bottom: 30px;
+	// margin-bottom: 30px;
 	padding: 0 20px 20px 20px;
 	border-bottom: 1px solid #ececec;
 }
@@ -348,4 +348,31 @@ article {
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 30px;
+}
+
+.authrs__links {
+	font-size: 24px;
+	margin-bottom: 30px;
+	a {
+		padding: 1px;
+		color: $primary;
+	}
+}
+
+.authrs__card {
+	border-bottom: 1px solid #ECECEC;
+	padding: 20px 0;
+}
+
+.authrs__card-head {
+	font-size: 24px;
+}
+
+.authrs__card-body {
+	font-size: 16px;
+	color: $primary;
+	column-count: 3;
+	padding: 0 10px;
+	column-gap: 90px;
+	column-rule: 1px solid #ECECEC;
 }
