@@ -19,10 +19,20 @@
 				<li class="nav__element"><a href="" class="nav__link">Процесс</a></li>
 				<li class="nav__element"><a href="" class="nav__link">Финансы / маркетинг</a></li>
 			</ul>
-			<form action="" class="search__field">
+
+				<form action="/search/" class="search__field" method=GET>
+					<input type="text" class="nav-search" name="nav-search" id="nav-search">
+					<button type="submit" class="nav-search-btn">
+						<svg width="24" height="24">
+							<use xlink:href="#ico-search" />
+						</svg>
+					</button>
+					<label class="nav-search-label" for="nav-search"></label>
+				</form>
+			<!--<form action="" class="search__field">
 				<input type="search">
 				
-			</form>
+			</form>-->
 		</div>
 	</div>
 </nav>

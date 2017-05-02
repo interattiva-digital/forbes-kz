@@ -180,6 +180,23 @@ p {
     margin: 10px 0;
 }
 
+select, [type='text'], [type='password'], [type='date'], [type='datetime'], [type='datetime-local'], [type='month'], [type='week'], [type='email'], [type='number'], [type='search'], [type='tel'], [type='time'], [type='url'], [type='color'], textarea {
+	height: inherit;
+	border: none;
+	box-shadow: none;
+	margin: 0;
+	transition: all .2s;
+
+	&:focus {
+		background-color: inherit;
+		transition: all .2s .1s;
+		box-shadow: none;
+		& + label {
+			// opacity: 1;
+		}
+	}
+}
+
 .column-block {
     margin-bottom: 1.25rem;
 }
