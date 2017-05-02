@@ -433,3 +433,64 @@ article {
 	width: 100%;
 	left: 0;
 }
+
+.info-details {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+}
+
+.blog__author {
+	padding-left: 30px;
+}
+
+.blog__card-large {
+	padding: 20px 0;
+	border-bottom: 1px solid $primary;
+}
+
+.blog__avatar {
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+}
+
+.blog__whois {
+	padding-left: 30px;
+}
+
+.blog__whois-name {
+	font-size: 36px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+.blog__whois-about {
+	font-size: 16px;
+	color: $main-gray-dark;
+	margin-bottom: 13px;
+}
+
+.blog__recent {
+	padding-top: 20px;
+	.column-block {
+		margin-bottom: 0;
+	}
+}
+
+.blog__recent-post {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 110px;
+	position: relative;
+	border-bottom: 1px solid #ECECEC;
+	.info-details {
+		bottom: 10px;
+	}
+}
+
+.blog__recent-title {
+	font-size: 18px;
+	font-weight: 600;
+}
