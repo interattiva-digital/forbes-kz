@@ -95,9 +95,15 @@ article {
 		font-size: 13px;
 		color: $primary;
 		text-transform: none;
+		a {
+			color: $main-gray-dark;
+		}
+
+		&:last-child {
 			a {
-				color: $main-gray-dark;
+				color: $primary;
 			}
+		}
 
 		&:not(:last-child) {
 			&:after {
@@ -127,6 +133,7 @@ article {
 
 .watches {
 	margin-top: 30px;
+	// margin-bottom: 30px;
 	border-top: 1px solid #ECECEC;
 	border-bottom: 1px solid #ECECEC;
 	font-size: 18px;
@@ -215,6 +222,10 @@ article {
 
 .author__pos {
 	color: $main-gray-dark;
+}
+
+.recommended {
+	padding-top: 30px;
 }
 
 .recommended__button {
@@ -493,4 +504,51 @@ article {
 .blog__recent-title {
 	font-size: 18px;
 	font-weight: 600;
+}
+
+.blog__page-tag {
+	.is-tcell {
+		vertical-align: bottom;
+	}
+	.tag__name {
+		text-align: left;
+	}
+}
+
+.tag {
+	padding-top: 35px;
+	padding-bottom: 10px;
+}
+
+.blog__page-author {
+	width: 270px;
+	float: left;
+	padding: 0 20px 20px;
+}
+
+.blog__page-avatar {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+}
+
+.blog__page-whois {
+	margin-top: 20px;
+	div {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+
+	}
+}
+
+.blog__page-name {
+	span {
+		font-weight: 600;
+	}
+}
+
+.blog__page-role {
+	font-size: 14px;
+	color: $main-gray-dark;
 }
