@@ -137,9 +137,14 @@ h5 {
     display: table;
     width: 100%;
 }
+
+.is-trow {
+    display: table-row;
+}
 .is-tcell {
     display: table-cell;
 }
+
 
 .wrapper-top {
     overflow: hidden;
@@ -173,6 +178,16 @@ p {
     max-width: 170px;
     text-align: center;
     margin: 10px 0;
+}
+
+.column-block {
+    margin-bottom: 1.25rem;
+}
+
+@media print, screen and (min-width: 40em) {
+    .column-block {
+        margin-bottom: 1.875rem;
+    }
 }
 
 @import 'parts/socials';

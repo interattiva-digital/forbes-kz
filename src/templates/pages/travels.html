@@ -1,0 +1,16 @@
+---
+layout: inner-page
+---
+
+{{> ad-inner}}
+<h1>Путешествия</h1>
+<div class="inner__container">
+	<div class="map">
+		map
+	</div>
+	<div class="row travel__cards small-up-3">
+		{{#repeat 9}}
+			{{> travels__card}}
+		{{/repeat}}
+	</div>
+</div>
