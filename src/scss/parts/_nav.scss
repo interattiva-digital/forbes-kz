@@ -123,7 +123,7 @@ $nav-height: 50px;
 
 
 // BURGER MENU
-.nav-icon3 {
+.menu-nav {
     width: 40px;
     height: 40px;
     position: absolute;
@@ -138,7 +138,7 @@ $nav-height: 50px;
 //   }
 }
 
-.nav-icon3 span {
+.menu-nav span {
   display: block;
   position: absolute;
   height: 3px;
@@ -151,41 +151,41 @@ $nav-height: 50px;
   transition: transform .25s ease-in-out;
 }
 
-.nav-icon3 span:nth-child(1) {
+.menu-nav span:nth-child(1) {
   top: 12px;
 }
 
-.nav-icon3 span:nth-child(2), .nav-icon3 span:nth-child(3) {
+.menu-nav span:nth-child(2), .menu-nav span:nth-child(3) {
   top: 18px;
 }
 
-.nav-icon3 span:nth-child(4) {
+.menu-nav span:nth-child(4) {
   top: 24px;
 }
 
-.nav-icon3.open {
+.menu-nav.open {
 	top: 6px;
 	z-index: 10;
 }
 
-.nav-icon3.open span{
+.menu-nav.open span{
 	background: #fff;
 }
 
-.nav-icon3.open span:nth-child(1) {
+.menu-nav.open span:nth-child(1) {
   top: 12px;
   width: 0%;
 }
 
-.nav-icon3.open span:nth-child(2) {
+.menu-nav.open span:nth-child(2) {
   transform: rotate(45deg);
 }
 
-.nav-icon3.open span:nth-child(3) {
+.menu-nav.open span:nth-child(3) {
   transform: rotate(-45deg);
 }
 
-.nav-icon3.open span:nth-child(4) {
+.menu-nav.open span:nth-child(4) {
   top: 24px;
   width: 0%;
 }
