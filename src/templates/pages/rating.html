@@ -1,0 +1,41 @@
+---
+layout: inner-page
+---
+
+<h1>20 звезд шоу-бизнеса и спорта - 2016</h1>
+<div class="inner__container">
+	<div class="" id="ratingContainer"></div>
+	<table class="rating__table">
+		<thead>
+			<tr>
+				<th>
+					<svg width="18" height="18">
+						<use xlink:href="#ico-sort" />
+					</svg>
+					Место
+				</th>
+				<th>Имя</th>
+				<th>Всего</th>
+				<th>Доход</th>
+				<th>Упоминаемость</th>
+				<th>Подписчики в Instagram</th>
+				<th>Награды</th>
+			</tr>
+		</thead>
+		<tbody>
+			{{> tbody-tr}}
+			{{> tbody-tr}}
+			{{> tbody-tr}}
+			{{> tbody-tr}}
+			{{> tbody-tr}}
+			{{> tbody-tr}}
+			{{> tbody-tr}}
+		</tbody>
+	</table>
+	<button class="load-more">
+		<div class="">Показать ещё</div>
+		<div class="">↓</div>
+	</button>
+</div>
+{{> watches}}
+{{> inner-read-also-block}}
