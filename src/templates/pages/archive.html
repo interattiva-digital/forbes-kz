@@ -3,6 +3,32 @@ layout: inner-page
 ---
 
 <h1>Архив №64 (Декабрь ‘16)</h1>
+	<div class="row magazine-pagination">
+		<div class="column small-3">
+			{{> archive__pagi-prev}}
+		</div>
+		<div class="column small-3">
+			{{> archive__pagi-next}}
+		</div>
+		<div class="column small-6">
+			<a href="http://focuson.kz/payment/site/payment/id/5" target="_blank" class="subscribe-banner gray-bg">
+				<div class="subscribe-banner__title">
+					Оформите подписку на журнал
+				</div>
+				<div class="subscribe-banner__body">
+					<img src="img/logo.svg" alt="">
+					<div class="button">Подписаться
+						<svg width="20" height="20">
+							<use xlink:href="#ico-arrow" />
+						</svg>
+					</div>
+				</div>
+			</a>
+		</div>
+	</div>
 <div class="inner__container">
 
+	{{#repeat 8}}
+		{{> inner-read-also-card}}
+	 {{/repeat}}
 </div>

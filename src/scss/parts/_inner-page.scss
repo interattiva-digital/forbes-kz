@@ -642,7 +642,30 @@ article {
 	}
 }
 
-.magazine__number {
-	// font-size: 16px;
-	// margin-top: 10px;
+.magazine-pagination {
+	margin-top: 30px;
+}
+
+.subscribe-banner {
+	padding: 30px 0;
+	text-align: center;
+	display: block;
+	&:hover, &:focus {
+		text-decoration: inherit;
+	}
+}
+
+.subscribe-banner__title {
+	font-weight: 600;
+	color: $main-gray-dark;
+	text-transform: uppercase;
+}
+
+.subscribe-banner__body {
+	padding: 0 100px;
+	img {
+		width: 100%;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
 }
