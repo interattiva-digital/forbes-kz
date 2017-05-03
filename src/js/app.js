@@ -1,7 +1,27 @@
 $(document).ready(function(){
 	$(document).foundation();
 
-	//    ************************  SLIDER *******************************
+	// SEARCH BUTTON
+
+	$('[data-search-button]').on('click', function(e) {
+		e.preventDefault();
+
+		var $current = $(e.currentTarget);
+
+		var $target = $($current.attr('data-search-button'));
+
+		if($target.val() !== '') {
+			$current.submit();
+			console.log('hello');
+		} else {
+			$target.addClass('active');
+			$target.focus();
+		}
+	});
+
+	$('#nav-search-form').on('submit');
+
+	//    ************************ SLIDER *******************************
 	$('.raiting-slider-stars').slick({
 		dots: true,
 		infinite: true,
@@ -20,7 +40,7 @@ $(document).ready(function(){
 	});
 
 
-	// //    ************************  TABS *******************************
+	// //    ************************ TABS *******************************
 	$('.tab-control').on('click', function() {
 		
 		var group = $(this).parent().parent().attr('data-tab-group');

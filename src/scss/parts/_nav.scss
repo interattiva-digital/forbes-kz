@@ -49,7 +49,7 @@ $nav-height: 50px;
 }
 
 .nav-search {
-	width: 0;
+	width: 1px;
 	padding-left: 5px;
 	padding-right: 35px;
 	background-color: transparent;
@@ -58,20 +58,17 @@ $nav-height: 50px;
 	border-radius: 0px;
 	z-index: 0;
 	position: relative;
-	&:focus {
-		border: none;
-		border-bottom: 1px solid $main-gray;
-	}
 	
 	&:focus {
+		border: none;
 		width: 180px;
 		border-bottom: 1px solid $main-gray;
 		& + .nav-search-btn svg {
 			// fill: $main-gray;
 		}
 
-		& ~ .nav-search-label {
-			display: none;
+		& ~ label {
+			display: none!important;
 		}
 	}
 }
