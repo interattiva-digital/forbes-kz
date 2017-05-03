@@ -405,8 +405,22 @@ article {
 	margin: 30px 0;
 }
 
+
 .travel__card {
 	border-bottom: 1px solid #ECECEC;
+}
+
+.travel__card-top {
+	&:hover {
+		color: #fff;
+		a {
+			text-decoration: none;
+		}
+
+		& + .is-trow .travel__card-body .travel__card-title a {
+			text-decoration: underline;
+		}
+	}
 }
 
 .travel__card-img {
