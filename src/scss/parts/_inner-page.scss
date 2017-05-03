@@ -634,3 +634,15 @@ article {
 	margin-top: 10px;
 	line-height: 1.2;
 }
+
+.archive__magazine {
+	color: $primary;
+	&:hover {
+		color: $primary;
+	}
+}
+
+.magazine__number {
+	// font-size: 16px;
+	// margin-top: 10px;
+}
