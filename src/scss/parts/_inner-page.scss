@@ -669,3 +669,53 @@ article {
 		margin-bottom: 30px;
 	}
 }
+
+.search-filter {
+	color: $main-gray-dark;
+	ul {
+		margin-left: 8px;
+		display: inline-block;
+		li {
+			color: $gray-text;
+			font-size: 16px;
+			&:not(:last-child) {
+				margin-right: 8px;
+			}
+		}
+	}
+
+	.filter-control {
+		padding: 0 10px;
+    	border-radius: 2px;
+
+		&.is-active {
+			background-color: $primary;
+			color: #fff;
+		}
+	}
+
+	
+}
+
+.global-search__form {
+	margin-top: 30px;
+	.form-group {
+		margin-top: 10px;
+		margin-bottom: 30px;
+		position: relative;
+		button {
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 50px;
+			height: 50px;
+			padding: 12px;
+		}
+	}
+	input[type='text'] {
+		padding-right: 50px;
+		height: 50px;
+		background-color: #FAFAFA;
+	}
+}

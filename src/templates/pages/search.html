@@ -3,6 +3,33 @@ layout: inner-page
 ---
 
 <h1>Поиск</h1>
+<form action="" class="global-search__form">
+	<div class="search-filter">
+		Искать:
+		<ul class="menu-common">
+			<li><button class="filter-control is-active">Везде</button></li>
+			<li><button class="filter-control">В статьях и блогах</button></li>
+			<li><button class="filter-control">В новостях</button></li>
+		</ul>
+	</div>
+	<div class="form-group">
+		<input type="text">
+		<button type="submit">
+			<svg width="24" height="24">
+				<use xlink:href="#ico-search" />
+			</svg>
+		</button>
+	</div>
+	<div class="search-filter">
+		Сортировать по:
+		<ul class="menu-common">
+			<li><button class="filter-control is-active">Релевантности</button></li>
+			<li><button class="filter-control">В статьях и блогах</button></li>
+		</ul>
+	</div>
+</form>
 <div class="inner__container">
-
+	{{#repeat 8}}
+		{{> inner-read-also-card}}
+	 {{/repeat}}
 </div>
