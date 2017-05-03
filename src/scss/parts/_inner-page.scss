@@ -283,6 +283,14 @@ article {
 
 .ra-card__img {
 	width: 200px;
+	&:hover {
+		& + .ra-card__info .ra-card__title a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.ra-img-link {
 }
 
 .ra-card__info {
